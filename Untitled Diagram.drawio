@@ -1,0 +1,390 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.0.6">
+  <diagram name="Page-1" id="hPRf1ZRXTt6KbThM8HfA">
+    <mxGraphModel dx="2080" dy="1935" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-77" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-1" target="6hVGUgSfzXovcDmSTl_J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-80" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-1" target="6hVGUgSfzXovcDmSTl_J-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-1" value="Demam kurang dari seminggu?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="137" y="-231" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-13" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-2" target="6hVGUgSfzXovcDmSTl_J-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-66" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-2" target="6hVGUgSfzXovcDmSTl_J-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-2" value="Apakah demam terus menerus sepanjang hari?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="-103" width="116" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-16" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-12" target="6hVGUgSfzXovcDmSTl_J-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-18" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-12" target="6hVGUgSfzXovcDmSTl_J-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-12" value="Apakah ada nyeri kepala, penurunan kesadaran dan atau kejang?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="64" y="-7" width="120" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-15" value="Meningitis. Segera bawa ke IGD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-31" y="119" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-20" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-17" target="6hVGUgSfzXovcDmSTl_J-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-17" value="Apakah ada gangguan pendengaran, keseimbangan dan atau cairan dari lubang telinga?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="94" y="144" width="120" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-19" value="Otitis. Dapat berobat ke fasilitas kesehatan tingkat 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-2" y="281" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-24" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-21" target="6hVGUgSfzXovcDmSTl_J-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-21" value="Apakah ada batuk pilek, nyeri menelan, dan atau nyeri dahi dan pipi?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="298" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-22" value="ISPA. Dapat berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="92" y="403" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-17" target="6hVGUgSfzXovcDmSTl_J-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="185" y="423" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-33" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-25" target="6hVGUgSfzXovcDmSTl_J-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-35" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-25" target="6hVGUgSfzXovcDmSTl_J-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-25" value="Apakah ada diare, susah BAB dan atau mual muntah?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="228" y="397" width="120" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-30" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-26" target="6hVGUgSfzXovcDmSTl_J-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-26" value="Apakah pasien lemas, tidak mau minum dan ada penurunan kesadaran?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="169" y="495" width="120" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-27" value="Infeksi saluran pencernaan dengan dehidrasi berat. Segera bawa ke IGD" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="55" y="642" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-28" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.575;entryY=0.023;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-21" target="6hVGUgSfzXovcDmSTl_J-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-29" value="Infeksi saluran pencernaan tanpa dehidrasi. Dapat berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="192" y="622" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-31" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.595;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-26" target="6hVGUgSfzXovcDmSTl_J-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-37" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-34" target="6hVGUgSfzXovcDmSTl_J-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-39" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-34" target="6hVGUgSfzXovcDmSTl_J-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-34" value="Apakah BAK terasa nyeri, lebih sedikit, berdarah, dan atau terdapat nyeri perut bawah?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="343" y="507" width="120" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-36" value="Infeksi saluran kemih. Berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="331" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-41" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;entryX=0.43;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-38" target="6hVGUgSfzXovcDmSTl_J-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-38" value="Apakah terdapat nyeri kepala, nyeri belakang mata, otot, tulang dan sendi?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="647" width="120" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-43" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-40" target="6hVGUgSfzXovcDmSTl_J-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-47" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-40" target="6hVGUgSfzXovcDmSTl_J-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-40" value="Dari 1-10 apakah nyerinya bernilai di atas 6? 1 tidak nyeri 10 sangat nyeri" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="367" y="761" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-42" value="Chikungunya. Berobat ke faskes 1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="829" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-46" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-44" target="6hVGUgSfzXovcDmSTl_J-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-49" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-44" target="6hVGUgSfzXovcDmSTl_J-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-44" value="Apakah terdapat nyeri perut, muntah terus menerus, sesak, dan atau perdarahan?(mimisan, gusi berdarah, bab berdarah)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="312" y="857" width="120" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-45" value="Demam Berdarah dengan tanda bahaya. Segera bawa ke IGD" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="155" y="997" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-48" value="Demam Berdarah tanpa tanda bahaya. Berobat ke faskes 1, rutin cek darah" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="1075" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-74" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-50" target="6hVGUgSfzXovcDmSTl_J-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-50" value="Apakah terdapat kuning pada mata atau kulit?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="546" y="769" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-51" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.357;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-38" target="6hVGUgSfzXovcDmSTl_J-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-55" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-52" target="6hVGUgSfzXovcDmSTl_J-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-63" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-52" target="6hVGUgSfzXovcDmSTl_J-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-65" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-52" target="6hVGUgSfzXovcDmSTl_J-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-52" value="Apakah, pernah ada kontak dengan banjir, air yang terinfeksi, atau urin binatang?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="502" y="885" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-53" value="Leptospirosis. Segera berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="392" y="1001" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-54" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.563;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-50" target="6hVGUgSfzXovcDmSTl_J-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-60" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-56" target="6hVGUgSfzXovcDmSTl_J-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-68" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-56" target="6hVGUgSfzXovcDmSTl_J-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-56" value="Apakah ada riwayat traveling ke tempat endemis seperti wilayah timur indonesia?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="233" y="1" width="120" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-59" value="Malaria. Segera berobat ke faskes 1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="218" y="119" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-64" value="Cari penyebab infeksi lain. Kemungkinan keganasan atau autoimun. Brobat ke spesialis penyakit dalam" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="487" y="1069" width="120" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-67" value="Pantau gejala lainnya. kemungkinan demam tifoid minggu pertama" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="353" y="103" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-76" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-69" target="6hVGUgSfzXovcDmSTl_J-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-104" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-69" target="6hVGUgSfzXovcDmSTl_J-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-69" value="Apakah terdapat ruam di kulit?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-101" y="-278" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-106" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-70" target="6hVGUgSfzXovcDmSTl_J-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-108" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-70" target="6hVGUgSfzXovcDmSTl_J-107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-70" value="Apakah terdapat muntah, penurunan kesadaran dan atau nyeri kepala?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-427" y="-211" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-73" value="Kemungkinan infeksi virus. Istirahat dan makan yang cukup." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="658" y="878" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-83" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-78" target="6hVGUgSfzXovcDmSTl_J-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-78" value="Apakah terdapat mual, muntah, sakit perut, diare, atau susah BAB?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="402" y="-149" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-79" value="Demam Tifoid minggu ke dua. Segera berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="376" y="-24" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-81" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.583;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-78" target="6hVGUgSfzXovcDmSTl_J-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-85" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-82" target="6hVGUgSfzXovcDmSTl_J-84">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-87" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-82" target="6hVGUgSfzXovcDmSTl_J-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-82" value="Apakah ada keluhan batuk lebih dari dua minggu dan atau kontak dengan orang yang riwayat TB?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="538" y="-48" width="120" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-84" value="Tiberkulosis, berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="494" y="84" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-89" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-86" target="6hVGUgSfzXovcDmSTl_J-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-86" value="Apakah ada nyeri menelan?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="648" y="91" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-88" value="Konsilitis, Berobat ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="549" y="198" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-93" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-90" target="6hVGUgSfzXovcDmSTl_J-92">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-97" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-90" target="6hVGUgSfzXovcDmSTl_J-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-90" value="Apakah ada cairan keluar dari telinga?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="694" y="192" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-91" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.413;entryY=0.037;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-86" target="6hVGUgSfzXovcDmSTl_J-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-92" value="Otitis media kronis. Berobat ke THT" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="622" y="301" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-96" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-94" target="6hVGUgSfzXovcDmSTl_J-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-94" value="Apakah terdapat gerakan tidak wajar, nyeri sendi, ruam kulit?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="778" y="315" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-95" value="Demam rematik akut. Berobat ke penyakit dalam." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="664" y="407" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-102" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-98" target="6hVGUgSfzXovcDmSTl_J-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-103" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-98" target="6hVGUgSfzXovcDmSTl_J-101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-98" value="Apakah terdapat penurunan berat badan yang drastis, lemas dan atau pucat?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="821" y="424" width="120" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-99" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.608;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-94" target="6hVGUgSfzXovcDmSTl_J-98">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-100" value="Keganasan. Berobat ke penyakit dalam" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="726" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-101" value="Autoimun. Berobat ke penyakit dalam." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="898" y="568" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-105" value="TSS (Toxic Shock Syndrome) Segera bawa ke IGD. amati gejala lainnya setelah stabil" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-547" y="-140" width="120" height="89" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-110" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-107" target="6hVGUgSfzXovcDmSTl_J-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-112" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-107" target="6hVGUgSfzXovcDmSTl_J-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-107" value="Apakah ruam berbentuk bintik atau kecil kecil?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-372" y="-111" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-109" value="Demam berdarah. ke faskes 1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-469" y="-30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-134" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-111" target="6hVGUgSfzXovcDmSTl_J-119">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-136" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-111" target="6hVGUgSfzXovcDmSTl_J-135">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-111" value="Apakah ruam berisi cairan?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-283" y="-10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-116" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-113" target="6hVGUgSfzXovcDmSTl_J-115">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-118" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-113" target="6hVGUgSfzXovcDmSTl_J-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-113" value="Apakah terdapat 3c (Batuk, pilek, mata merah)?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-236" y="291" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-115" value="Campak. Bawa ke faskes 1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-247" y="403" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-131" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-117" target="6hVGUgSfzXovcDmSTl_J-130">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-117" value="Apakah terdapat benjolan di belakang telinga?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-135" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-122" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-119" target="6hVGUgSfzXovcDmSTl_J-121">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-119" value="Apakah ruam muncul setelah demam turun?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-190" y="179" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-124" value="" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-121" target="6hVGUgSfzXovcDmSTl_J-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-126" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-121" target="6hVGUgSfzXovcDmSTl_J-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-121" value="Apakah kulit terasa kasar seperti pasir dan lidah seperti stroberi?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-382" y="291" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-123" value="Scarlet Fever. Segera bawa ke faskes 1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-508" y="392" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-125" value="Roseola infantum. Segera faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-376" y="407" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-127" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.394;entryY=0.053;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-119" target="6hVGUgSfzXovcDmSTl_J-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-128" value="Rubella. Segera faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-234" y="562" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-129" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.556;entryY=0.064;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-117" target="6hVGUgSfzXovcDmSTl_J-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-130" value="Erythema infectiosum. Segera ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-77" y="582" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-138" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-135" target="6hVGUgSfzXovcDmSTl_J-137">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-144" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-135" target="6hVGUgSfzXovcDmSTl_J-143">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-135" value="Apakah ruam muncul setelah demam turun?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-405" y="59" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-140" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-137" target="6hVGUgSfzXovcDmSTl_J-139">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-142" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-137" target="6hVGUgSfzXovcDmSTl_J-141">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-137" value="Apakah ruam terasa terbakar, dan berada di sekitar mulut atau genital?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-469" y="201" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-139" value="HSV (Herpesimplex virus) Segera ke faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-659" y="263" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-141" value="Kawasaki Disease. Segera berobat ke penyakit dalam" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-534" y="298" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-147" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-143" target="6hVGUgSfzXovcDmSTl_J-146">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-149" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="6hVGUgSfzXovcDmSTl_J-143" target="6hVGUgSfzXovcDmSTl_J-148">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-143" value="Apakah ruam muncul di tangan kaki dan mulut?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-620" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-146" value="HFMD(Hand foot and mouth disease) Segera faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-745" y="156" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6hVGUgSfzXovcDmSTl_J-148" value="Cacar air atau varisela. segera faskes 1" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-600" y="156" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
