@@ -83,7 +83,7 @@ void diagnosis5(){
     cout << "Herpes Simpleks Virus (HSV)" << endl;
     tindakan1();
 }
-void diagnosis5(){
+void diagnosis6(){
     garis();
     cout << "TANDA DAN GEJALA:" << endl;
     cout << "1. Terdapat ruam pada kulit." << endl;
@@ -96,4 +96,32 @@ void diagnosis5(){
     cout << "DIAGNOSIS:" << endl;
     cout << "Kawasaki Disease" << endl;
     tindakan3();
+}
+void diagnosis7(){
+    garis();
+    cout << "TANDA DAN GEJALA:" << endl;
+    cout << "1. Terdapat ruam pada kulit." << endl;
+    cout << "2. Tidak terdapat muntah, penurunan kesadaran, dan atau nyeri kepala." << endl;
+    cout << "3. Tidak terdapat ruam berbentuk bintik atau berukuran kecil." << endl;
+    cout << "4. Tidak terdapat ruam berisi cairan." << endl;
+    cout << "5. Ruam muncul setelah demam turun." << endl;
+    cout << "6. Kulit terasa kasar seperti pasir dan lidah seperti stoberi." << endl;
+    garis();
+    cout << "DIAGNOSIS:" << endl;
+    cout << "Scarlet Fever" << endl;
+    tindakan1();
+}
+void diagnosis8(){
+    garis();
+    cout << "TANDA DAN GEJALA:" << endl;
+    cout << "1. Terdapat ruam pada kulit." << endl;
+    cout << "2. Tidak terdapat muntah, penurunan kesadaran, dan atau nyeri kepala." << endl;
+    cout << "3. Tidak terdapat ruam berbentuk bintik atau berukuran kecil." << endl;
+    cout << "4. Tidak terdapat ruam berisi cairan." << endl;
+    cout << "5. Ruam muncul setelah demam turun." << endl;
+    cout << "6. Kulit terasa kasar seperti pasir dan lidah seperti stoberi." << endl;
+    garis();
+    cout << "DIAGNOSIS:" << endl;
+    cout << "Scarlet Fever" << endl;
+    tindakan1();
 }
