@@ -30,7 +30,23 @@ void tindakan5() {
     cout << "Berobat ke dokter spesialis THT." << endl;
 }
 
-void biodata()
+void biodata() {
+    string nama;
+    int umur;
+    char jk;
+    cout << "Masukkan Biodata Pasien:" << endl;
+    cout << "Nama: ";
+    cin >> nama;
+    cout << "Umur: ";
+    cin >> umur;
+    cout << "Jenis Kelamin (L/P): ";
+    cin >> jk;
+    garis();
+    cout << "Biodata Pasien:" << endl;
+    cout << "Nama: " << nama << endl;
+    cout << "Umur: " << umur << endl;
+    cout << "Jenis Kelamin: " << (jk == 'L' ? "Laki-laki" : "Perempuan") << endl;   
+}
 
 void diagnosis1(){
     garis();
