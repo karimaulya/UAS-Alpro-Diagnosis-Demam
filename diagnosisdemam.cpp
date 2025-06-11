@@ -34,18 +34,19 @@ void biodata() {
     string nama;
     int umur;
     char jk;
+    garis();
     cout << "Masukkan Biodata Pasien:" << endl;
     cout << "Nama: ";
     cin >> nama;
     cout << "Umur: ";
     cin >> umur;
-    cout << "Jenis Kelamin (L/P): ";
+    cout << "Jenis Kelamin: ";
     cin >> jk;
     garis();
     cout << "Biodata Pasien:" << endl;
     cout << "Nama: " << nama << endl;
     cout << "Umur: " << umur << endl;
-    cout << "Jenis Kelamin: " << (jk == 'L' ? "Laki-laki" : "Perempuan") << endl;   
+    cout << "Jenis Kelamin: " << (jk == 'L' || jk == 'l' ? "Laki-laki" : "Perempuan") << endl; 
 }
 
 void diagnosis1(){
@@ -518,204 +519,202 @@ void diagnosis31(){
     tindakan3();
 }
 int main() {
-    string nama, jk;
-    int umur;
-    char pilihan;
-    cout << "SISTEM DIAGNOSIS PENYAKIT DEMAM" << endl;
-    garis();
-    cout << "Nama Pasien: ";
-    cin >> nama;
-    cout << "Umur Pasien: ";
-    cin >> umur;
-    cout << "Jenis Kelamin Pasien (L/P): ";
-    cin >> jk;
-    garis();
-    cout << "Jawab pertanyaan berikut dengan Y (Ya) atau T (Tidak)" << endl;
-    cout << "Apakah terdapat ruam pada kulit? ";
-    cin >> pilihan;
-    if (pilihan == 'Y' || pilihan == 'y') {
-        cout << "Apakah terdapat muntah, penurunan kesadaran, dan atau nyeri kepala?";
+    char pilihan, lanjut;
+    do { 
+        biodata();
+        garis();
+        cout << "Jawab pertanyaan berikut dengan Y (Ya) atau T (Tidak)" << endl;
+        cout << "Apakah terdapat ruam pada kulit? ";
         cin >> pilihan;
         if (pilihan == 'Y' || pilihan == 'y') {
-            diagnosis1();
-        } else if (pilihan == 'T' || pilihan == 't') {
-            cout << "Apakah terdapat ruam berbentuk bintik atau berukuran kecil?";
+            cout << "Apakah terdapat muntah, penurunan kesadaran, dan atau nyeri kepala? ";
             cin >> pilihan;
             if (pilihan == 'Y' || pilihan == 'y') {
-                diagnosis2();
+                diagnosis1();
             } else if (pilihan == 'T' || pilihan == 't') {
-                cout << "Apakah terdapat ruam berisi cairan?";
+                cout << "Apakah terdapat ruam berbentuk bintik atau berukuran kecil? ";
                 cin >> pilihan;
                 if (pilihan == 'Y' || pilihan == 'y') {
-                    cout << "Apakah ruam muncul setelah demam turun?";
-                    cin >> pilihan;
-                    if (pilihan == 'Y' || pilihan == 'y') {
-                        cout << "Apakah ruam muncul di tangan, kaki, dan mulut?";
-                        cin >> pilihan;
-                        if (pilihan == 'Y' || pilihan == 'y') {
-                            diagnosis3();
-                        } else if (pilihan == 'T' || pilihan == 't') {
-                            diagnosis4();
-                        }
-                    } else if (pilihan == 'T' || pilihan == 't') {
-                        cout << "Apakah ruam terasa terbakar, dan berada di sekitar mulut atau genital?";
-                        cin >> pilihan;
-                        if (pilihan == 'Y' || pilihan == 'y') {
-                            diagnosis5();
-                        } else if (pilihan == 'T' || pilihan == 't') {
-                            diagnosis6();
-                        }
-                    }
+                    diagnosis2();
                 } else if (pilihan == 'T' || pilihan == 't') {
-                    cout << "Apakah ruam muncul setelah demam turun?";
+                    cout << "Apakah terdapat ruam berisi cairan? ";
                     cin >> pilihan;
                     if (pilihan == 'Y' || pilihan == 'y') {
-                        cout << "Apakah kulit terasa kasar seperti pasir dan lidah seperti stoberi?";
+                        cout << "Apakah ruam muncul setelah demam turun? ";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan == 'y') {
-                            diagnosis7();
-                        } else if (pilihan == 'T' || pilihan == 't') {
-                            diagnosis8();
-                        }
-                    } else if (pilihan == 'T' || pilihan == 't') {
-                        cout << "Apakah terdapat 3C (Cough, Coryza, Conjunctivitis), batuk, pilek, dan mata merah?";
-                        cin >> pilihan;
-                        if (pilihan == 'Y' || pilihan == 'y') {
-                            diagnosis9();
-                        } else if (pilihan == 'T' || pilihan == 't') {
-                            cout << "Apakah terdapat benjolan di belakang telinga?";
+                            cout << "Apakah ruam muncul di tangan, kaki, dan mulut? ";
                             cin >> pilihan;
                             if (pilihan == 'Y' || pilihan == 'y') {
-                                diagnosis10();
+                                diagnosis3();
                             } else if (pilihan == 'T' || pilihan == 't') {
-                                diagnosis11();
+                                diagnosis4();
+                            }
+                        } else if (pilihan == 'T' || pilihan == 't') {
+                            cout << "Apakah ruam terasa terbakar, dan berada di sekitar mulut atau genital? ";
+                            cin >> pilihan;
+                            if (pilihan == 'Y' || pilihan == 'y') {
+                                diagnosis5();
+                            } else if (pilihan == 'T' || pilihan == 't') {
+                                diagnosis6();
+                            }
+                        }
+                    } else if (pilihan == 'T' || pilihan == 't') {
+                        cout << "Apakah ruam muncul setelah demam turun? ";
+                        cin >> pilihan;
+                        if (pilihan == 'Y' || pilihan == 'y') {
+                            cout << "Apakah kulit terasa kasar seperti pasir dan lidah seperti stoberi? ";
+                            cin >> pilihan;
+                            if (pilihan == 'Y' || pilihan == 'y') {
+                                diagnosis7();
+                            } else if (pilihan == 'T' || pilihan == 't') {
+                                diagnosis8();
+                            }
+                        } else if (pilihan == 'T' || pilihan == 't') {
+                            cout << "Apakah terdapat 3C (Cough, Coryza, Conjunctivitis), batuk, pilek, dan mata merah? ";
+                            cin >> pilihan;
+                            if (pilihan == 'Y' || pilihan == 'y') {
+                                diagnosis9();
+                            } else if (pilihan == 'T' || pilihan == 't') {
+                                cout << "Apakah terdapat benjolan di belakang telinga? ";
+                                cin >> pilihan;
+                                if (pilihan == 'Y' || pilihan == 'y') {
+                                    diagnosis10();
+                                } else if (pilihan == 'T' || pilihan == 't') {
+                                    diagnosis11();
+                                }
                             }
                         }
                     }
                 }
             }
-        }
-    } else if (pilihan == 'T' || pilihan == 't') {
-        cout << "Apakah demam kurang dari seminggu?";
-        cin >> pilihan;
-        if (pilihan == 'Y' || pilihan == 'y') {
-            cout << "Apakah demam terus menerus sepanjang hari?";
+        } else if (pilihan == 'T' || pilihan == 't') {
+            cout << "Apakah demam kurang dari seminggu? ";
             cin >> pilihan;
             if (pilihan == 'Y' || pilihan == 'y') {
-                cout << "Apakah terdapat nyeri kepala, penurunan kesadaran dan atau kejang?";
+                cout << "Apakah demam terus menerus sepanjang hari? ";
                 cin >> pilihan;
                 if (pilihan == 'Y' || pilihan == 'y') {
-                    diagnosis12();
-                } else if (pilihan == 'T' || pilihan == 't') {
-                    cout << "Apakah terdapat gangguan pendengaran, keseimbangan dan atau cairan dari lubang telinga?";
+                    cout << "Apakah terdapat nyeri kepala, penurunan kesadaran dan atau kejang? ";
                     cin >> pilihan;
                     if (pilihan == 'Y' || pilihan == 'y') {
-                        diagnosis13();
+                        diagnosis12();
                     } else if (pilihan == 'T' || pilihan == 't') {
-                        cout << "Apakah terdapat batuk, pilek, nyeri menelan, dan atau nyeri dahi dan pipi?";
+                        cout << "Apakah terdapat gangguan pendengaran, keseimbangan dan atau cairan dari lubang telinga? ";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan == 'y') {
-                            diagnosis14();
+                            diagnosis13();
                         } else if (pilihan == 'T' || pilihan == 't') {
-                            cout << "Apakah terdapat diare, susah BAB, dan atau mual muntah?";
+                            cout << "Apakah terdapat batuk, pilek, nyeri menelan, dan atau nyeri dahi dan pipi? ";
                             cin >> pilihan;
                             if (pilihan == 'Y' || pilihan == 'y') {
-                                cout << "Apakah pasien lemas, tidak mau minum, dan atau penurunan kesadaran?";
-                                cin >> pilihan;
-                                if (pilihan == 'Y' || pilihan == 'y') {
-                                    diagnosis15();
-                                } else if (pilihan == 'T' || pilihan == 't') {
-                                    diagnosis16();
-                                }
+                                diagnosis14();
                             } else if (pilihan == 'T' || pilihan == 't') {
-                                cout << "Apakah BAK terasa nyeri, lebih sedikit, berdarah, dan atau terdapat nyeri perut bagian bawah?";
+                                cout << "Apakah terdapat diare, susah BAB, dan atau mual muntah? ";
                                 cin >> pilihan;
                                 if (pilihan == 'Y' || pilihan == 'y') {
-                                    diagnosis17();
-                                } else if (pilihan == 'T' || pilihan == 't') {
-                                    cout << "Apakah terdapat nyeri kepala, nyeri belakang mata, nyeri otot, dan atau nyeri sendi?";
+                                    cout << "Apakah pasien lemas, tidak mau minum, dan atau penurunan kesadaran? ";
                                     cin >> pilihan;
                                     if (pilihan == 'Y' || pilihan == 'y') {
-                                        cout << "Dari 1 - 10 skala nyeri di atas 6? ";
-                                        cin >> pilihan;
-                                        if (pilihan == 'Y' || pilihan == 'y') {
-                                            diagnosis18();
-                                        } else if (pilihan == 'T' || pilihan == 't') {
-                                            cout << "Apakah terdapat nyeri perut, muntah terus menerus, sesak, dan atau pendarahan?";
-                                            cin >> pilihan;
-                                            if (pilihan == 'Y' || pilihan == 'y') {
-                                                diagnosis19();
-                                            } else if (pilihan == 'T' || pilihan == 't') {
-                                                diagnosis32();
-                                            }
-                                        }
+                                        diagnosis15();
                                     } else if (pilihan == 'T' || pilihan == 't') {
-                                        cout << "Apakah terdapat kuning pada mata atau kulit?";
+                                        diagnosis16();
+                                    }
+                                } else if (pilihan == 'T' || pilihan == 't') {
+                                    cout << "Apakah BAK terasa nyeri, lebih sedikit, berdarah, dan atau terdapat nyeri perut bagian bawah? ";
+                                    cin >> pilihan;
+                                    if (pilihan == 'Y' || pilihan == 'y') {
+                                        diagnosis17();
+                                    } else if (pilihan == 'T' || pilihan == 't') {
+                                        cout << "Apakah terdapat nyeri kepala, nyeri belakang mata, nyeri otot, dan atau nyeri sendi? ";
                                         cin >> pilihan;
                                         if (pilihan == 'Y' || pilihan == 'y') {
-                                            cout << "Pernah kontak dengan banjir, air yang terinfeksi, atau urine binatang? ";
+                                            cout << "Dari 1 - 10 skala nyeri di atas 6? ";
                                             cin >> pilihan;
                                             if (pilihan == 'Y' || pilihan == 'y') {
-                                                diagnosis20();
+                                                diagnosis18();
                                             } else if (pilihan == 'T' || pilihan == 't') {
-                                                diagnosis21();
+                                                cout << "Apakah terdapat nyeri perut, muntah terus menerus, sesak, dan atau pendarahan? ";
+                                                cin >> pilihan;
+                                                if (pilihan == 'Y' || pilihan == 'y') {
+                                                    diagnosis19();
+                                                } else if (pilihan == 'T' || pilihan == 't') {
+                                                    diagnosis32();
+                                                }
                                             }
                                         } else if (pilihan == 'T' || pilihan == 't') {
-                                            diagnosis22();
+                                            cout << "Apakah terdapat kuning pada mata atau kulit? ";
+                                            cin >> pilihan;
+                                            if (pilihan == 'Y' || pilihan == 'y') {
+                                                cout << "Pernah kontak dengan banjir, air yang terinfeksi, atau urine binatang? ";
+                                                cin >> pilihan;
+                                                if (pilihan == 'Y' || pilihan == 'y') {
+                                                    diagnosis20();
+                                                } else if (pilihan == 'T' || pilihan == 't') {
+                                                    diagnosis21();
+                                                }
+                                            } else if (pilihan == 'T' || pilihan == 't') {
+                                                diagnosis22();
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                }
-            } else if (pilihan == 'T' || pilihan == 't') {
-                cout << "Apakah ada riwayat traveling ke tempat endemik seperti wilayah timur Indonesia?";
-                cin >> pilihan;
-                if (pilihan == 'Y' || pilihan =='y') {
-                    diagnosis23();
                 } else if (pilihan == 'T' || pilihan == 't') {
-                    diagnosis24();
-                }
-            }
-        } else if (pilihan == 'T' || pilihan == 't') {
-            cout << "Apakahterdapat mual, muntah, nyeri perut, susah BAB, dan atau diare?";
-            cin >> pilihan;
-            if (pilihan == 'Y' || pilihan =='y') {
-                diagnosis25();
-            } else if (pilihan == 'T' || pilihan == 't') {
-                cout << "Apakah batuk lebih dari dua minggu dan atau kontak dengan orang yang memiliki riwayat Tuberculosis (TB)?";
-                cin >> pilihan;
-                if (pilihan == 'Y' || pilihan =='y') {
-                    diagnosis26();
-                } else if (pilihan == 'T' || pilihan == 't') {
-                    cout << "Apakah terdapat nyeri menelan?";
+                    cout << "Apakah ada riwayat traveling ke tempat endemik seperti wilayah timur Indonesia? ";
                     cin >> pilihan;
                     if (pilihan == 'Y' || pilihan =='y') {
-                        diagnosis27();
+                        diagnosis23();
                     } else if (pilihan == 'T' || pilihan == 't') {
-                        cout << "Apakah terdapat cairan keluar dari telinga?";
+                        diagnosis24();
+                    }
+                }
+            } else if (pilihan == 'T' || pilihan == 't') {
+                cout << "Apakahterdapat mual, muntah, nyeri perut, susah BAB, dan atau diare? ";
+                cin >> pilihan;
+                if (pilihan == 'Y' || pilihan =='y') {
+                    diagnosis25();
+                } else if (pilihan == 'T' || pilihan == 't') {
+                    cout << "Apakah batuk lebih dari dua minggu dan atau kontak dengan orang yang memiliki riwayat Tuberculosis (TB)? ";
+                    cin >> pilihan;
+                    if (pilihan == 'Y' || pilihan =='y') {
+                        diagnosis26();
+                    } else if (pilihan == 'T' || pilihan == 't') {
+                        cout << "Apakah terdapat nyeri menelan? ";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan =='y') {
-                            diagnosis28();
+                            diagnosis27();
                         } else if (pilihan == 'T' || pilihan == 't') {
-                            cout << "Apakah terdapat gerakan tidak wajar (sydenham chorea), nyeri sendi, dan atau ruam pada kulit?";
+                            cout << "Apakah terdapat cairan keluar dari telinga? ";
                             cin >> pilihan;
                             if (pilihan == 'Y' || pilihan =='y') {
-                                diagnosis29();
+                                diagnosis28();
                             } else if (pilihan == 'T' || pilihan == 't') {
-                                cout << "Apakah terdapat penurunan berat badan drastis, lemas dan atau pucat?";
+                                cout << "Apakah terdapat gerakan tidak wajar (sydenham chorea), nyeri sendi, dan atau ruam pada kulit? ";
                                 cin >> pilihan;
                                 if (pilihan == 'Y' || pilihan =='y') {
-                                    diagnosis30();
+                                    diagnosis29();
                                 } else if (pilihan == 'T' || pilihan == 't') {
-                                    diagnosis31();
+                                    cout << "Apakah terdapat penurunan berat badan drastis, lemas dan atau pucat? ";
+                                    cin >> pilihan;
+                                    if (pilihan == 'Y' || pilihan =='y') {
+                                        diagnosis30();
+                                    } else if (pilihan == 'T' || pilihan == 't') {
+                                        diagnosis31();
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
+            } 
         } 
-    }                          
- }
+        garis();
+        cout << "Apakah Anda ingin melakukan diagnosis lagi? (Y/T): ";
+        cin >> lanjut;
+    } while (lanjut == 'Y' || lanjut == 'y');
+    cout << "Terima kasih telah menggunakan program ini." << endl;
+    return 0;             
+ } 
