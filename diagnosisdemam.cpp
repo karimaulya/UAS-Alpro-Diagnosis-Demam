@@ -1,6 +1,9 @@
 #include <iostream>
+#include <sstream>
+#include <fstream>
 #include <vector>
-#include <fstream> 
+#include <string>
+
 using namespace std;
 
 struct RekamMedis {
@@ -23,31 +26,88 @@ void simpanRekamMedis(string nama, string nik, int umur, char jk, string diagnos
 
 void cariRekamMedis() {
     string cariNama, cariNIK;
-    cout << "Masukkan Nama atau NIK pasien yang ingin dicari: " << endl;
-    cout << "Nama: ";
+    cout << "Masukkan Nama yang dicari: ";
     cin >> cariNama;
-    cout << "NIK: ";
+    cout << "Masukkan NIK yang dicari: ";
     cin >> cariNIK;
     bool ketemu = false;
-    for (auto &rm : dataRekamMedis) {
-        if (rm.nama == cariNama || rm.nik == cariNIK) {
-            garis();
-            cout << "Biodata Pasien:" << endl;
+    for (const auto &rm : dataRekamMedis) {
+        if (rm.nama == cariNama && rm.nik == cariNIK) {
             cout << "Nama: " << rm.nama << endl;
             cout << "NIK: " << rm.nik << endl;
             cout << "Umur: " << rm.umur << endl;
-            cout << "Jenis Kelamin: " << (rm.jk == 'L' || rm.jk == 'l' ? "Laki-laki" : "Perempuan") << endl;
-            garis();
+            cout << "Jenis Kelamin: " << rm.jk << endl;
             cout << "Diagnosis: " << rm.diagnosis << endl;
             cout << "Tindakan: " << rm.tindakan << endl;
             ketemu = true;
+            break;
         }
     }
-    if (!ketemu) {
-        cout << "Rekam medis tidak ditemukan." << endl;
-    }
+    if (!ketemu) cout << "Data tidak ditemukan." << endl;
 }
 
+void simpanSemuaRekamMedisKeCSV() {
+    ofstream file("rekam_medis.csv");
+    if (!file.is_open()) {
+        cout << "Gagal membuka file rekam_medis.csv" << endl;
+        return;
+    } else {
+        file << "Nama,NIK,Umur,JenisKelamin,Diagnosis,Tindakan\n";
+        for (const auto &rm : dataRekamMedis) {
+            file << rm.nama << "," << rm.nik << "," << rm.umur << "," << rm.jk << "," << rm.diagnosis << "," << rm.tindakan << "\n";
+        }
+    }
+    file.close();
+    cout << "Data rekam medis berhasil disimpan ke rekam_medis.csv" << endl;
+}
+
+
+void bacaRekamMedisDariCSV() {
+    ifstream file("rekam_medis.csv");
+    if (!file.is_open()) return;
+    dataRekamMedis.clear();
+    string line;
+    getline(file, line); 
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string nama, nik, umurStr, jkStr, diagnosis, tindakan;
+        getline(ss, nama, ',');
+        getline(ss, nik, ',');
+        getline(ss, umurStr, ',');
+        getline(ss, jkStr, ',');
+        getline(ss, diagnosis, ',');
+        getline(ss, tindakan, '\n');
+        RekamMedis rm;
+        rm.nama = nama;
+        rm.nik = nik;
+        rm.umur = stoi(umurStr);
+        rm.jk = jkStr[0];
+        rm.diagnosis = diagnosis;
+        rm.tindakan = tindakan;
+        dataRekamMedis.push_back(rm);
+    }
+    file.close();
+}
+
+void hapusRekamMedis() {
+    string cariNama, cariNIK;
+    cout << "Nama yang ingin dihapus: "; cin >> cariNama;
+    cout << "NIK yang ingin dihapus: "; cin >> cariNIK;
+    bool ketemu = false;
+    for (auto it = dataRekamMedis.begin(); it != dataRekamMedis.end(); ++it) {
+        if (it->nama == cariNama && it->nik == cariNIK) {
+            dataRekamMedis.erase(it);
+            ketemu = true;
+            break;
+        }
+    }
+    if (ketemu) {
+        simpanSemuaRekamMedisKeCSV();
+        cout << "Data berhasil dihapus.\n";
+    } else {
+        cout << "Data tidak ditemukan.\n";
+    }
+}
 
 void tindakan1() {
     garis();
@@ -79,13 +139,15 @@ void biodata(string &nama, string &nik, int &umur, char &jk) {
     garis();
     cout << "Masukkan Biodata Pasien:" << endl;
     cout << "Nama: ";
-    cin >> nama;
+    cin.ignore(); 
+    getline(cin, nama);
     cout << "NIK: ";
-    cin >> nik;
+    getline(cin, nik);
     cout << "Umur: ";
     cin >> umur;
     cout << "Jenis Kelamin (P/L): ";
     cin >> jk;
+
     garis();
     cout << "Biodata Pasien:" << endl;
     cout << "Nama: " << nama << endl;
@@ -93,6 +155,7 @@ void biodata(string &nama, string &nik, int &umur, char &jk) {
     cout << "Umur: " << umur << endl;
     cout << "Jenis Kelamin: " << (jk == 'L' || jk == 'l' ? "Laki-laki" : "Perempuan") << endl; 
 }
+
 
 void diagnosis1(string nama, string nik, int umur, char jk) {
     garis();
@@ -104,6 +167,8 @@ void diagnosis1(string nama, string nik, int umur, char jk) {
     cout << "Toxic Shock Syndrome (TSS) atau Sindrom Syok Beracun." << endl;
     tindakan2();
     simpanRekamMedis(nama, nik, umur, jk, "Toxic Shock Syndrome (TSS)", "Segera bawa ke Instalasi Gawat Darurat (IGD) rumah sakit terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis2(string nama, string nik, int umur, char jk) {
     garis();
@@ -116,6 +181,8 @@ void diagnosis2(string nama, string nik, int umur, char jk) {
     cout << "Demam Berdarah." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Demam Berdarah", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis3(string nama, string nik, int umur, char jk) {
     garis();
@@ -131,6 +198,7 @@ void diagnosis3(string nama, string nik, int umur, char jk) {
     cout << "Hand Foot and Mouth Disease (HFMD)" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Hand Foot and Mouth Disease (HFMD)", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis4(string nama, string nik, int umur, char jk) {
     garis();
@@ -146,6 +214,8 @@ void diagnosis4(string nama, string nik, int umur, char jk) {
     cout << "Cacar air atau Varisela" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Cacar air atau Varisela", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis5(string nama, string nik, int umur, char jk) {
     garis();
@@ -161,6 +231,8 @@ void diagnosis5(string nama, string nik, int umur, char jk) {
     cout << "Herpes Simpleks Virus (HSV)" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Herpes Simpleks Virus (HSV)", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis6(string nama, string nik, int umur, char jk) {
     garis();
@@ -176,6 +248,8 @@ void diagnosis6(string nama, string nik, int umur, char jk) {
     cout << "Kawasaki Disease" << endl;
     tindakan3();
     simpanRekamMedis(nama, nik, umur, jk, "Kawasaki Disease", "Segera berobat ke dokter spesialis penyakit dalam.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis7(string nama, string nik, int umur, char jk) {
     garis();
@@ -191,6 +265,8 @@ void diagnosis7(string nama, string nik, int umur, char jk) {
     cout << "Scarlet Fever" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Scarlet Fever", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis8(string nama, string nik, int umur, char jk) {
     garis();
@@ -206,6 +282,8 @@ void diagnosis8(string nama, string nik, int umur, char jk) {
     cout << "Roseola Infantum" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Roseola Infantum", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis9(string nama, string nik, int umur, char jk) {
     garis();
@@ -221,6 +299,8 @@ void diagnosis9(string nama, string nik, int umur, char jk) {
     cout << "Campak" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Campak", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis10(string nama, string nik, int umur, char jk) {
     garis();
@@ -237,6 +317,8 @@ void diagnosis10(string nama, string nik, int umur, char jk) {
     cout << "Rubella" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Rubella", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis11(string nama, string nik, int umur, char jk) {
     garis();
@@ -253,6 +335,8 @@ void diagnosis11(string nama, string nik, int umur, char jk) {
     cout << "Erythema Infectiosum" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Erythema Infectiosum", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis12(string nama, string nik, int umur, char jk) {
     garis();
@@ -266,6 +350,8 @@ void diagnosis12(string nama, string nik, int umur, char jk) {
     cout << "Meningitis." << endl;
     tindakan2();
     simpanRekamMedis(nama, nik, umur, jk, "Meningitis", "Segera bawa ke Instalasi Gawat Darurat (IGD) rumah sakit terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV(); 
 }
 void diagnosis13(string nama, string nik, int umur, char jk) {
     garis();
@@ -280,6 +366,8 @@ void diagnosis13(string nama, string nik, int umur, char jk) {
     cout << "Otitis." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Otitis", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis14(string nama, string nik, int umur, char jk) {
     garis();
@@ -295,6 +383,8 @@ void diagnosis14(string nama, string nik, int umur, char jk) {
     cout << "Infeksi Saluran Pernapasan Atas (ISPA)." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Infeksi Saluran Pernapasan Atas (ISPA)", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis15(string nama, string nik, int umur, char jk) {
     garis();
@@ -312,6 +402,8 @@ void diagnosis15(string nama, string nik, int umur, char jk) {
     cout << "Infeksi Saluran Pencernaan, dengan dehidrasi berat." << endl;
     tindakan2();
     simpanRekamMedis(nama, nik, umur, jk, "Infeksi Saluran Pencernaan, dengan dehidrasi berat", "Segera bawa ke Instalasi Gawat Darurat (IGD) rumah sakit terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis16(string nama, string nik, int umur, char jk) {
     garis();
@@ -329,6 +421,8 @@ void diagnosis16(string nama, string nik, int umur, char jk) {
     cout << "Infeksi Saluran Pencernaan, tanpa dehidrasi." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Infeksi Saluran Pencernaan, tanpa dehidrasi", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis17(string nama, string nik, int umur, char jk) {
     garis();
@@ -346,6 +440,8 @@ void diagnosis17(string nama, string nik, int umur, char jk) {
     cout << "Infeksi saluran kemih." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Infeksi saluran kemih", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis18(string nama, string nik, int umur, char jk) {
     garis();
@@ -365,6 +461,8 @@ void diagnosis18(string nama, string nik, int umur, char jk) {
     cout << "Chikungunya." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Chikungunya", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");    
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis19(string nama, string nik, int umur, char jk) {
     garis();
@@ -385,6 +483,8 @@ void diagnosis19(string nama, string nik, int umur, char jk) {
     cout << "Demam berdarah dengan tanda bahaya." << endl;
     tindakan2();
     simpanRekamMedis(nama, nik, umur, jk, "Demam berdarah dengan tanda bahaya", "Segera bawa ke Instalasi Gawat Darurat (IGD) rumah sakit terdekat.");  
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis32(string nama, string nik, int umur, char jk) {
     garis();
@@ -405,6 +505,8 @@ void diagnosis32(string nama, string nik, int umur, char jk) {
     cout << "Demam berdarah tanpa tanda bahaya." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Demam berdarah tanpa tanda bahaya", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis20(string nama, string nik, int umur, char jk) {
     garis();
@@ -425,6 +527,8 @@ void diagnosis20(string nama, string nik, int umur, char jk) {
     cout << "Leptospirosis." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Leptospirosis", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis21(string nama, string nik, int umur, char jk) {
     garis();
@@ -445,6 +549,8 @@ void diagnosis21(string nama, string nik, int umur, char jk) {
     cout << "Cari penyebab infeksi lain. Kemungkinan keganasan atau autoimun." << endl;
     tindakan3();
     simpanRekamMedis(nama, nik, umur, jk, "Keganasan atau autoimun", "Segera berobat ke dokter spesialis penyakit dalam.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis22(string nama, string nik, int umur, char jk) {
     garis();
@@ -464,6 +570,8 @@ void diagnosis22(string nama, string nik, int umur, char jk) {
     cout << "Kemungkinan infeksi virus" << endl;
     tindakan4();
     simpanRekamMedis(nama, nik, umur, jk, "Infeksi virus", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis23(string nama, string nik, int umur, char jk) {
     garis();
@@ -477,6 +585,8 @@ void diagnosis23(string nama, string nik, int umur, char jk) {
     cout << "Malaria" << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Malaria", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis24(string nama, string nik, int umur, char jk) {
     garis();
@@ -490,6 +600,8 @@ void diagnosis24(string nama, string nik, int umur, char jk) {
     cout << "Pantau gejala lainnya. Kemungkinan demam tifoid minggu pertama." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Demam tifoid minggu pertama", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");    
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis25(string nama, string nik, int umur, char jk) {
     garis();
@@ -502,6 +614,8 @@ void diagnosis25(string nama, string nik, int umur, char jk) {
     cout << "Demam tifoid minggu kedua." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Demam tifoid minggu kedua", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis26(string nama, string nik, int umur, char jk) {
     garis();
@@ -515,6 +629,8 @@ void diagnosis26(string nama, string nik, int umur, char jk) {
     cout << "Tuberculosis (TB)." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Tuberculosis (TB)", "Segera berobat ke dokter spesialis penyakit dalam.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis27(string nama, string nik, int umur, char jk) {
     garis();
@@ -529,6 +645,8 @@ void diagnosis27(string nama, string nik, int umur, char jk) {
     cout << "Tonsilitis." << endl;
     tindakan1();
     simpanRekamMedis(nama, nik, umur, jk, "Tonsilitis", "Berobat ke fasilitas kesehatan tingkat pertama (FKTP) terdekat.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis28(string nama, string nik, int umur, char jk) {
     garis();
@@ -544,6 +662,8 @@ void diagnosis28(string nama, string nik, int umur, char jk) {
     cout << "Otitis media kronis." << endl;
     tindakan5();
     simpanRekamMedis(nama, nik, umur, jk, "Otitis media kronis", "Segera berobat ke dokter spesialis THT.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis29(string nama, string nik, int umur, char jk) {
     garis();
@@ -560,6 +680,8 @@ void diagnosis29(string nama, string nik, int umur, char jk) {
     cout << "Demam rematik akut" << endl;
     tindakan3();
     simpanRekamMedis(nama, nik, umur, jk, "Demam rematik akut", "Segera berobat ke dokter spesialis penyakit dalam.");  
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis30(string nama, string nik, int umur, char jk) {
     garis();
@@ -577,6 +699,8 @@ void diagnosis30(string nama, string nik, int umur, char jk) {
     cout << "Keganasan" << endl;
     tindakan3();
     simpanRekamMedis(nama, nik, umur, jk, "Keganasan", "Segera berobat ke dokter spesialis penyakit dalam.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
 void diagnosis31(string nama, string nik, int umur, char jk) {
     garis();
@@ -594,38 +718,39 @@ void diagnosis31(string nama, string nik, int umur, char jk) {
     cout << "Autoimun" << endl;
     tindakan3();
     simpanRekamMedis(nama, nik, umur, jk, "Autoimun", "Segera berobat ke dokter spesialis penyakit dalam.");
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
+    simpanSemuaRekamMedisKeCSV();
 }
-void simpanSemuaRekamMedisKeFile() {
-    ofstream file("rekam_medis.txt");
-    if (!file.is_open()) {
-        cout << "Gagal membuka file rekam_medis.txt" << endl;
-        return;
-    }
-    for (const auto &rm : dataRekamMedis) {
-        file << "Nama: " << rm.nama << endl;
-        file << "NIK: " << rm.nik << endl;
-        file << "Umur: " << rm.umur << endl;
-        file << "Jenis Kelamin: " << (rm.jk == 'L' || rm.jk == 'l' ? "Laki-laki" : "Perempuan") << endl;
-        file << "Diagnosis: " << rm.diagnosis << endl;
-        file << "Tindakan: " << rm.tindakan << endl;
-        file << "------------------------" << endl;
-    }
-    file.close();
-    cout << "Data rekam medis berhasil disimpan ke rekam_medis.txt" << endl;
-}
+
 int main() {
+    // simpanRekamMedis("Uji Nama", "9876543210", 99, 'L', "Tes Diagnosis", "Tes Tindakan");
+    // cout << "Jumlah data: " << dataRekamMedis.size() << endl;
+
+    // simpanSemuaRekamMedisKeCSV();
+
+    // cout << "DEBUG: Selesai simpan ke CSV." << endl;
+    // return 0;
+
+    bacaRekamMedisDariCSV();
     char menu, lanjut;
     do {
         cout << "===== MENU UTAMA =====" << endl;
         cout << "1. Diagnosis Demam" << endl;
         cout << "2. Cari Rekam Medis" << endl;
-        cout << "Pilih menu (1/2): ";
+        cout << "3. Hapus Rekam Medis" << endl;
+        cout << "Pilih menu (1/2/3): ";
         cin >> menu;
 
-        if (menu == '1') {
+        if (menu == '2') {
+            cariRekamMedis();
+        } else if (menu == '3') {
+            hapusRekamMedis();
+
+        } else if (menu == '1') {
             string nama, nik;
             int umur;
             char jk;
+            biodata(nama, nik, umur, jk);
             char pilihan;
             garis();
             cout << "SISTEM DIAGNOSIS PENYAKIT DEMAM" << endl;
@@ -637,13 +762,11 @@ int main() {
                 cout << "Apakah terdapat muntah, penurunan kesadaran, dan atau nyeri kepala?";
                 cin >> pilihan;
                 if (pilihan == 'Y' || pilihan == 'y') {
-                    biodata(nama, nik, umur, jk);
                     diagnosis1(nama, nik, umur, jk);
                 } else if (pilihan == 'T' || pilihan == 't') {
                     cout << "Apakah terdapat ruam berbentuk bintik atau berukuran kecil?";
                     cin >> pilihan;
                     if (pilihan == 'Y' || pilihan == 'y') {
-                        biodata(nama, nik, umur, jk);
                         diagnosis2(nama, nik, umur, jk);
                     } else if (pilihan == 'T' || pilihan == 't') {
                         cout << "Apakah terdapat ruam berisi cairan?";
@@ -655,20 +778,16 @@ int main() {
                                 cout << "Apakah ruam muncul di tangan, kaki, dan mulut?";
                                 cin >> pilihan;
                                 if (pilihan == 'Y' || pilihan == 'y') {
-                                    biodata(nama, nik, umur, jk);
                                     diagnosis3(nama, nik, umur, jk);
                                 } else if (pilihan == 'T' || pilihan == 't') {
-                                    biodata(nama, nik, umur, jk);
                                     diagnosis4(nama, nik, umur, jk);
                                 }
                             } else if (pilihan == 'T' || pilihan == 't') {
                                 cout << "Apakah ruam terasa terbakar, dan berada di sekitar mulut atau genital?";
                                 cin >> pilihan;
-                                if (pilihan == 'Y' || pilihan == 'y') {
-                                    biodata(nama, nik, umur, jk);
+                                if (pilihan == 'Y' || pilihan == 'y') {                    
                                     diagnosis5(nama, nik, umur, jk);
                                 } else if (pilihan == 'T' || pilihan == 't') {
-                                    biodata(nama, nik, umur, jk);
                                     diagnosis6(nama, nik, umur, jk);
                                 }
                             }
@@ -678,27 +797,22 @@ int main() {
                             if (pilihan == 'Y' || pilihan == 'y') {
                                 cout << "Apakah kulit terasa kasar seperti pasir dan lidah seperti stoberi?";
                                 cin >> pilihan;
-                                if (pilihan == 'Y' || pilihan == 'y') {
-                                    biodata(nama, nik, umur, jk);
+                                if (pilihan == 'Y' || pilihan == 'y') {                   
                                     diagnosis7(nama, nik, umur, jk);
-                                } else if (pilihan == 'T' || pilihan == 't') {
-                                    biodata(nama, nik, umur, jk);
+                                } else if (pilihan == 'T' || pilihan == 't') {                  
                                     diagnosis8(nama, nik, umur, jk);
                                 }
                             } else if (pilihan == 'T' || pilihan == 't') {
                                 cout << "Apakah terdapat 3C (Cough, Coryza, Conjunctivitis), batuk, pilek, dan mata merah?";
                                 cin >> pilihan;
-                                if (pilihan == 'Y' || pilihan == 'y') {
-                                    biodata(nama, nik, umur, jk);
+                                if (pilihan == 'Y' || pilihan == 'y') {                   
                                     diagnosis9(nama, nik, umur, jk);
                                 } else if (pilihan == 'T' || pilihan == 't') {
                                     cout << "Apakah terdapat benjolan di belakang telinga?";
                                     cin >> pilihan;
                                     if (pilihan == 'Y' || pilihan == 'y') {
-                                        biodata(nama, nik, umur, jk);
                                         diagnosis10(nama, nik, umur, jk);
-                                    } else if (pilihan == 'T' || pilihan == 't') {
-                                        biodata(nama, nik, umur, jk);
+                                    } else if (pilihan == 'T' || pilihan == 't') {                        
                                         diagnosis11(nama, nik, umur, jk);
                                     }
                                 }
@@ -716,19 +830,19 @@ int main() {
                         cout << "Apakah terdapat nyeri kepala, penurunan kesadaran dan atau kejang?";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan == 'y') {
-                            biodata(nama, nik, umur, jk);
+            
                             diagnosis12(nama, nik, umur, jk);
                         } else if (pilihan == 'T' || pilihan == 't') {
                             cout << "Apakah terdapat gangguan pendengaran, keseimbangan dan atau cairan dari lubang telinga?";
                             cin >> pilihan;
                             if (pilihan == 'Y' || pilihan == 'y') {
-                                biodata(nama, nik, umur, jk);
+                
                                 diagnosis13(nama, nik, umur, jk);
                             } else if (pilihan == 'T' || pilihan == 't') {
                                 cout << "Apakah terdapat batuk, pilek, nyeri menelan, dan atau nyeri dahi dan pipi?";
                                 cin >> pilihan;
                                 if (pilihan == 'Y' || pilihan == 'y') {
-                                    biodata(nama, nik, umur, jk);
+                    
                                     diagnosis14(nama, nik, umur, jk);
                                 } else if (pilihan == 'T' || pilihan == 't') {
                                     cout << "Apakah terdapat diare, susah BAB, dan atau mual muntah?";
@@ -737,17 +851,17 @@ int main() {
                                         cout << "Apakah pasien lemas, tidak mau minum, dan atau penurunan kesadaran?";
                                         cin >> pilihan;
                                         if (pilihan == 'Y' || pilihan == 'y') {
-                                            biodata(nama, nik, umur, jk);
+                            
                                             diagnosis15(nama, nik, umur, jk);
                                         } else if (pilihan == 'T' || pilihan == 't') {
-                                            biodata(nama, nik, umur, jk);
+                            
                                             diagnosis16(nama, nik, umur, jk);
                                         }
                                     } else if (pilihan == 'T' || pilihan == 't') {
                                         cout << "Apakah BAK terasa nyeri, lebih sedikit, berdarah, dan atau terdapat nyeri perut bagian bawah?";
                                         cin >> pilihan;
                                         if (pilihan == 'Y' || pilihan == 'y') {
-                                            biodata(nama, nik, umur, jk);
+                            
                                             diagnosis17(nama, nik, umur, jk);
                                         } else if (pilihan == 'T' || pilihan == 't') {
                                             cout << "Apakah terdapat nyeri kepala, nyeri belakang mata, nyeri otot, dan atau nyeri sendi?";
@@ -756,16 +870,16 @@ int main() {
                                                 cout << "Dari 1 - 10 skala nyeri di atas 6? ";
                                                 cin >> pilihan;
                                                 if (pilihan == 'Y' || pilihan == 'y') {
-                                                    biodata(nama, nik, umur, jk);
+                                    
                                                     diagnosis18(nama, nik, umur, jk);
                                                 } else if (pilihan == 'T' || pilihan == 't') {
                                                     cout << "Apakah terdapat nyeri perut, muntah terus menerus, sesak, dan atau pendarahan?";
                                                     cin >> pilihan;
                                                     if (pilihan == 'Y' || pilihan == 'y') {
-                                                        biodata(nama, nik, umur, jk);
+                                        
                                                         diagnosis19(nama, nik, umur, jk);
                                                     } else if (pilihan == 'T' || pilihan == 't') {
-                                                        biodata(nama, nik, umur, jk);
+                                        
                                                         diagnosis32(nama, nik, umur, jk);
                                                     }
                                                 }
@@ -776,14 +890,14 @@ int main() {
                                                     cout << "Pernah kontak dengan banjir, air yang terinfeksi, atau urine binatang? ";
                                                     cin >> pilihan;
                                                     if (pilihan == 'Y' || pilihan == 'y') {
-                                                        biodata(nama, nik, umur, jk);
+                                        
                                                         diagnosis20(nama, nik, umur, jk);
                                                     } else if (pilihan == 'T' || pilihan == 't') {
-                                                        biodata(nama, nik, umur, jk);
+                                        
                                                         diagnosis21(nama, nik, umur, jk);
                                                     }
                                                 } else if (pilihan == 'T' || pilihan == 't') {
-                                                    biodata(nama, nik, umur, jk);
+                                    
                                                     diagnosis22(nama, nik, umur, jk);
                                                 }
                                             }
@@ -796,10 +910,10 @@ int main() {
                         cout << "Apakah ada riwayat traveling ke tempat endemik seperti wilayah timur Indonesia?";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan =='y') {
-                            biodata(nama, nik, umur, jk);
+            
                             diagnosis23(nama, nik, umur, jk);
                         } else if (pilihan == 'T' || pilihan == 't') {
-                            biodata(nama, nik, umur, jk);
+            
                             diagnosis24(nama, nik, umur, jk);
                         }
                     }
@@ -807,40 +921,36 @@ int main() {
                     cout << "Apakahterdapat mual, muntah, nyeri perut, susah BAB, dan atau diare?";
                     cin >> pilihan;
                     if (pilihan == 'Y' || pilihan =='y') {
-                        biodata(nama, nik, umur, jk);
+        
                         diagnosis25(nama, nik, umur, jk);
                     } else if (pilihan == 'T' || pilihan == 't') {
                         cout << "Apakah batuk lebih dari dua minggu dan atau kontak dengan orang yang memiliki riwayat Tuberculosis (TB)?";
                         cin >> pilihan;
                         if (pilihan == 'Y' || pilihan =='y') {
-                            biodata(nama, nik, umur, jk);
+            
                             diagnosis26(nama, nik, umur, jk);
                         } else if (pilihan == 'T' || pilihan == 't') {
                             cout << "Apakah terdapat nyeri menelan?";
                             cin >> pilihan;
                             if (pilihan == 'Y' || pilihan =='y') {
-                                biodata(nama, nik, umur, jk);
+                
                                 diagnosis27(nama, nik, umur, jk);
                             } else if (pilihan == 'T' || pilihan == 't') {
                                 cout << "Apakah terdapat cairan keluar dari telinga?";
                                 cin >> pilihan;
-                                if (pilihan == 'Y' || pilihan =='y') {
-                                    biodata(nama, nik, umur, jk);
+                                if (pilihan == 'Y' || pilihan =='y') {           
                                     diagnosis28(nama, nik, umur, jk);
                                 } else if (pilihan == 'T' || pilihan == 't') {
                                     cout << "Apakah terdapat gerakan tidak wajar (sydenham chorea), nyeri sendi, dan atau ruam pada kulit?";
                                     cin >> pilihan;
-                                    if (pilihan == 'Y' || pilihan =='y') {
-                                        biodata(nama, nik, umur, jk);
+                                    if (pilihan == 'Y' || pilihan =='y') {                  
                                         diagnosis29(nama, nik, umur, jk);
                                     } else if (pilihan == 'T' || pilihan == 't') {
                                         cout << "Apakah terdapat penurunan berat badan drastis, lemas dan atau pucat?";
                                         cin >> pilihan;
-                                        if (pilihan == 'Y' || pilihan =='y') {
-                                            biodata(nama, nik, umur, jk);
+                                        if (pilihan == 'Y' || pilihan =='y') {                          
                                             diagnosis30(nama, nik, umur, jk);
-                                        } else if (pilihan == 'T' || pilihan == 't') {
-                                            biodata(nama, nik, umur, jk);
+                                        } else if (pilihan == 'T' || pilihan == 't') {                            
                                             diagnosis31(nama, nik, umur, jk);
                                         }
                                     }
@@ -848,18 +958,15 @@ int main() {
                             }
                         }
                     }
-                } 
-            }
-            simpanSemuaRekamMedisKeFile();                           
-        } else if (menu == '2') {
-            cariRekamMedis();
+                }   
         } else {
             cout << "Menu tidak valid!" << endl;
         }
-
         cout << "Kembali ke menu utama? (Y/T): ";
         cin >> lanjut;
+    } 
     } while (lanjut == 'Y' || lanjut == 'y');
     cout << "Terima kasih telah menggunakan program ini." << endl;
+    cout << "Jumlah data di vector: " << dataRekamMedis.size() << endl;
     return 0;
 }
